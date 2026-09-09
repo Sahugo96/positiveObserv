@@ -19,7 +19,8 @@
       ],
       "js": [
         "lib/xlsx.full.min.js",
-        "content.js"
+        "content/roulette-observer.js",
+        "content/history-summary.js"
       ]
     }
   ],
