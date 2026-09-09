@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Roulette Observer",
+  "version": "1.0",
+  "description": "Отслеживает элемент .roulette_timer и сохраняет данные в Excel.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/xlsx.full.min.js",
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["lib/xlsx.full.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
